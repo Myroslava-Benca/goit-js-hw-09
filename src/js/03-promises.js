@@ -11,34 +11,35 @@ function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
   
-      const isSuccess = true;
       if (shouldResolve) {
-        resolve({position, delay})
+          resolve({ position, delay })
       } else {
         reject({position, delay})
-      }
-    }, refs.delay.value)
+      } 
+     }, refs.delay.value)
   })
 }
 
-
 function onBtnStart(evt) {
-  evt.preventDefault();
+    evt.preventDefault();
 
-  const firstDelay = Number(refs.delay.value);
-  const delayStep = Number(refs.step.value);
+    const numberDelay = Number(refs.delay.value);
+    const numberStep = Number(refs.step.value);
 
   for (let i = 0; i < refs.amount.value; i++) {
-    createPromise(1 + i, firstDelay + i * delayStep)
+    createPromise(1 + i, numberDelay + i * numberStep)  
       .then(({ position, delay }) => {
-        console.log(
-          `✅ Fulfilled promise ${position} in ${delay}ms`
-        );
-      })
-      .catch(({ position, delay }) => {
-        console.log(
-          `❌ Rejected promise ${position} in ${delay}ms`
-        );
-      });
-  }
+      console.log(
+        `✅ Fulfilled promise ${position} in ${delay}ms`
+      );
+    })
+        .catch(({ position, delay }) => {
+          console.log(
+            `❌ Rejected promise ${position} in ${delay}ms`
+          );
+        });
+    } 
 };
+
+
+
