@@ -1,9 +1,9 @@
 
 const colorBody = document.querySelector('body')
-const startBtn = document.querySelector('.button-start')
-const stopBtn = document.querySelector('.button-stop')
+const startBtn = document.querySelector('.btn-start')
+const stopBtn = document.querySelector('.btn-stop')
 
-// let timerId = null
+let timerId = null
 
 startBtn.addEventListener("click", onBtnClick);
 stopBtn.addEventListener("click", () => {
