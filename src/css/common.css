@@ -16,29 +16,3 @@ img {
   display: block;
   max-width: 100%;
 }
-
-.input {
-  border: 1px solid rgb(51, 50, 50);
-  border-radius: 5px;
-  margin-left: 20px;
-  margin-right: 5px;
-  margin-bottom: 20px;
-}
-.timer {
-  display: flex;
-}
-.timer .field {
-   margin-left: 20px;
-}
-.field span{
-  display: block;
-}
-.value {
-  font-size: 20px;
-}
-.label {
-  font-size: 9px;
-}
-button:disabled {
-  color:aliceblue;
-}
