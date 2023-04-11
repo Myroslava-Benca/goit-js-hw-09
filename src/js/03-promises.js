@@ -16,7 +16,7 @@ function createPromise(position, delay) {
       } else {
         reject({position, delay})
       } 
-     }, refs.delay.value)
+     }, delay)
   })
 }
 
@@ -31,15 +31,14 @@ function onBtnStart(evt) {
       .then(({ position, delay }) => {
       console.log(
         `✅ Fulfilled promise ${position} in ${delay}ms`
-      );
+      ); 
     })
-        .catch(({ position, delay }) => {
+      .catch(({ position, delay }) => {
           console.log(
             `❌ Rejected promise ${position} in ${delay}ms`
           );
         });
     } 
 };
-
 
 
